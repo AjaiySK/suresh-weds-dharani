@@ -740,10 +740,27 @@ footer {
     }
   });
 
-  /* ── Countdown to Reception: 26 May 2026, 12:00 AM IST ─ */
-  const weddingDate = new Date('2026-05-26T00:00:00+05:30');
+  /* ── Countdown ─────────────────────────────────────────── */
+  const weddingDate  = new Date('2026-05-26T00:00:00+05:30');
+  const weddingOver  = new Date('2026-05-28T00:00:00+05:30');
+
+  function switchToMarried() {
+    // Countdown section
+    document.querySelector('.cd-title-script').textContent = 'We Are Married!';
+    document.querySelector('.cd-date-sub').textContent     = '27th May 2026 — The most beautiful day of our lives';
+    document.querySelector('.countdown-pill').innerHTML    =
+      '<span style="font-family:Sacramento,cursive;font-size:clamp(1.8rem,7vw,2.6rem);color:var(--forest);padding:0.4rem 1rem;">Suresh & Dharani 💚</span>';
+
+    // Closing section
+    document.querySelector('.closing-sub').textContent    = 'We are overwhelmed with joy and gratitude.';
+    document.querySelector('.closing-script').textContent = 'Thank you for being part of our special day and for your love & blessings.';
+    document.querySelector('.closing-note').textContent   = 'With love, Suresh & Dharani';
+  }
+
   function updateCountdown() {
-    const diff = weddingDate - new Date();
+    const now  = new Date();
+    if (now >= weddingOver) { switchToMarried(); return; }
+    const diff = weddingDate - now;
     if (diff <= 0) {
       ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id => document.getElementById(id).textContent = '00');
       return;
