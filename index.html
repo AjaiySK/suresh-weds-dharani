@@ -429,15 +429,50 @@ footer {
 @keyframes scrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
 
 /* ── Mobile Responsive ─────────────────────────────────── */
-@media (max-width: 480px) {
-  section { padding: 4rem 1.2rem; }
-  #hero { padding: 4rem 1.2rem 5.5rem; }
-  .countdown-pill { padding: 0.8rem 0.8rem; }
-  .cd-unit { padding: 0 0.55rem; }
-  .letter-wrap { padding: 2rem 1.2rem; }
-  .venue-card { padding: 1.4rem 1.1rem; }
-  .hero-info { gap: 0.6rem; }
-  .hero-card { padding: 0.7rem 1rem; min-width: 95px; }
+@media (max-width: 600px) {
+  /* Global */
+  section { padding: 3.5rem 1rem; }
+  .container { padding: 0 1rem; }
+
+  /* Hero */
+  #hero { padding: 3.5rem 1rem 5rem; min-height: 100svh; }
+  .wreath-svg { width: clamp(240px, 85vw, 300px); height: clamp(240px, 85vw, 300px); }
+  .hero-info { gap: 0.5rem; flex-wrap: wrap; justify-content: center; width: 100%; }
+  .hero-card { padding: 0.65rem 0.9rem; min-width: 0; flex: 1 1 calc(33% - 0.5rem); }
+  .hero-card .hc-val { font-size: 0.9rem; }
+  .hero-card .hc-sub { font-size: 0.72rem; }
+
+  /* Countdown */
+  #countdown { padding: 2.5rem 1rem; }
+  .countdown-pill { padding: 0.8rem 0.6rem; width: 100%; max-width: 320px; }
+  .cd-unit { padding: 0 0.5rem; }
+  .cd-num { font-size: clamp(1.6rem, 8vw, 2.2rem); }
+
+  /* Couple */
+  #couple { padding: 3.5rem 1rem; }
+  .couple-photo-ring { width: 140px; height: 140px; }
+  .couple-wrap { display: flex; flex-direction: column; align-items: center; }
+  .couple-card { width: 100%; }
+
+  /* Letter */
+  #letter { padding: 3rem 1rem; }
+  .letter-wrap { padding: 1.8rem 1.2rem; }
+  .letter-body { font-size: 0.84rem; text-indent: 1.2em; }
+
+  /* Venue */
+  #venue { padding: 3rem 1rem 4rem; }
+  .venue-cards { max-width: 100%; }
+  .venue-card { padding: 1.4rem 1rem; border-radius: 16px; }
+  .venue-event-row { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+  .venue-map-frame { height: 180px; }
+
+  /* Closing */
+  #closing { padding: 3rem 1rem; }
+  .closing-script { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+
+  /* Welcome overlay */
+  #welcome-overlay { padding: 2rem 1.2rem; }
+  .wlc-photo { width: 130px; height: 130px; }
 }
 </style>
 </head>
