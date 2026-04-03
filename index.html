@@ -437,10 +437,11 @@ footer {
   /* Hero */
   #hero { padding: 3.5rem 1rem 5rem; min-height: 100svh; }
   .wreath-svg { width: clamp(240px, 85vw, 300px); height: clamp(240px, 85vw, 300px); }
-  .hero-info { gap: 0.5rem; flex-wrap: wrap; justify-content: center; width: 100%; }
-  .hero-card { padding: 0.65rem 0.9rem; min-width: 0; flex: 1 1 calc(33% - 0.5rem); }
-  .hero-card .hc-val { font-size: 0.9rem; }
-  .hero-card .hc-sub { font-size: 0.72rem; }
+  .hero-info { flex-direction: column; gap: 0.6rem; width: 100%; max-width: 300px; margin-left: auto; margin-right: auto; }
+  .hero-card { padding: 0.8rem 1.2rem; width: 100%; }
+  .hero-card .hc-label { font-size: 0.55rem; }
+  .hero-card .hc-val { font-size: 1rem; }
+  .hero-card .hc-sub { font-size: 0.8rem; }
 
   /* Countdown */
   #countdown { padding: 2.5rem 1rem; }
